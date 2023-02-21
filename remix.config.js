@@ -5,6 +5,7 @@ require("dotenv").config();
 if (!process.env.DISCORD_ID || !process.env.DISCORD_SECRET) {
   throw new Error("Please provide DISCORD_ID and DISCORD_SECRET in .env");
 }
+// rebuild
 //we need to define variables for esbuild since its easier to do than with cloudflare workers env bs
 withEsbuildOverride((option, { isServer, isDev }) => {
   option.define = {
