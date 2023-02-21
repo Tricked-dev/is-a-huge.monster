@@ -53,7 +53,7 @@ export async function action({ context, request }: ActionArgs) {
 
   const claims = ((await monster.get("claimed")) ?? "")
     .split(",")
-    .filter((claim) => claim !== found.value);
+    .filter((claim) => claim !== found.subdomain);
   await monster.put("claimed", [...claims].join(","));
 
   await monster.put(
@@ -140,4 +140,3 @@ export default function DashboardPage() {
     </div>
   );
 }
-
