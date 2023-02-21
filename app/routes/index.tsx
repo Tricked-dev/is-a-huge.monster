@@ -3,6 +3,10 @@ import config from "../config";
 export default function Index() {
   return (
     <div className="bg-base-300 max-w-[70rem] w-full mx-auto p-4 rounded-sm mt-4 text-center">
+      <p>
+        WIP, subdomains do not get registered yet but you can claim them for
+        when they do!
+      </p>
       <h1 className="text-2xl font-bold">
         WELCOME TO {config.SITE_NAME} FREEE SUBDOMAINS!
       </h1>
